@@ -1,5 +1,5 @@
 "use client"
-import { Video } from '@imagekit/next';
+import { Video } from '@imagekit/react';
 
 const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT;
 

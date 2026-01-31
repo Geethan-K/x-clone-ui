@@ -1,5 +1,5 @@
-import PostPage from "@/app/components/Post";
-import Comments from "@/app/components/Comments";
+import PostPage from "../../../components/Post";
+import Comments from "../../../components/Comments";
 import Image from "next/image";
 
 import Link from "next/link";
@@ -13,7 +13,7 @@ const StatusPage = () => {
         </Link>
         <h1 className="font-bold text-lg">Post</h1>
       </div>
-      <PostPage type="status"/>
+      <PostPage/>
       <Comments/>
     </div>
   );

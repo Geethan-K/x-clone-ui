@@ -1,4 +1,4 @@
-import {  Image , ImageKitProvider } from '@imagekit/next';
+import {  Image , ImageKitProvider } from '@imagekit/react';
 
 const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT
 type ImgType = {

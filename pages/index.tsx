@@ -1,7 +1,7 @@
 import Link from "next/link"
-import Feed from "./components/Feed"
-import MediaPage from "./components/MediaPage"
-import Shared from "./components/Shared"
+import Feed from "../components/Feed"
+import MediaPage from "../components/MediaPage"
+import Shared from "../components/Shared"
 
 const Homepage = () => {
   return (

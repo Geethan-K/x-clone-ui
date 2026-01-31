@@ -1,7 +1,7 @@
 import Image from "next/image"
-import MediaPage from "../components/MediaPage"
+import MediaPage from "../../components/MediaPage"
 import Link from "next/link"
-import Feed from "../components/Feed"
+import Feed from "../../components/Feed"
 
 const UserProfilePage = () => {
     <div className="">

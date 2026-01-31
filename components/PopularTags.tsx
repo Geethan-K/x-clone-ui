@@ -8,7 +8,7 @@ const PopularTags = () => {
             {/** TREND EVENT */}
             <div className="flex gap-4">
                 <div className="relative w-20 h-20 rounded-xl overflow-hidden">
-                    <MediaPage path="general/event.png" alt="event" w={120} h={120} tr={true}/>
+                    <MediaPage path="general/avatar.png" alt="event" w={120} h={120} tr={true}/>
                 </div>
                 <div className="flex-1">
                     <h2 className="font-bold text-textGrayLight">Kavithai Mohan</h2>

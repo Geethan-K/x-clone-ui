@@ -30,14 +30,38 @@ const menuList = [
         id:5,
         name:"BookMarks",
         link:"/",
-        icon:"bookmarks.svg"
+        icon:"bookmark.svg"
     },
     {
         id:6,
         name:"Jobs",
         link:"/",
         icon:"job.svg"
-    }
+    },
+    {
+    id: 7,
+    name: "Communities",
+    link: "/",
+    icon: "community.svg",
+  },
+  {
+    id: 8,
+    name: "Premium",
+    link: "/",
+    icon: "logo.svg",
+  },
+  {
+    id: 9,
+    name: "Profile",
+    link: "/",
+    icon: "profile.svg",
+  },
+  {
+    id: 10,
+    name: "More",
+    link: "/",
+    icon: "more.svg",
+  }
 ]
 const LeftBar = () => {
     return (
@@ -64,13 +88,13 @@ const LeftBar = () => {
                 </div>
                 {/* POST BUTTON */}
                 <Link 
-                    href='/compose/post' 
+                    href="/compose/post"
                     className="bg-white text-black rounded-full h-12 w-12 flex items-center justify-center xxl:hidden"
                 >
                     <Image src="icons/post.svg" alt="new post" height={24} width={24}/>
                 </Link>
                   <Link 
-                    href='/compose/post' 
+                    href="/compose/post" 
                     className="hidden xxl:block rounded-full bg-white text-black font-bold py-2 px-20"
                 >
                     Post

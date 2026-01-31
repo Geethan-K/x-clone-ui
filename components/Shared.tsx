@@ -29,11 +29,32 @@ const Shared = () => {
     const previewURL = media ? URL.createObjectURL(media) : ''
 
 
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const formData = new FormData(e.currentTarget);
+  const file = formData.get("file") as File;
+  const desc = formData.get("desc") as string;
+
+  const bytes = await file.arrayBuffer();
+  const base64 = Buffer.from(bytes).toString("base64");
+
+  await fetch("/api/posts/share", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      file: base64,
+      desc,
+      type: settings.type,
+      sensitive: settings.sensitive,
+    }),
+  });
+};
 
 
 
     return (
-        <form className="p-4 flex gap-4" action={formData => shareAction(formData, settings)}>
+        <form className="p-4 flex gap-4" onSubmit={handleSubmit}>
             {/** AVATAR */}
             <div className="relative w-10 h-10 rounded-full overflow-hidden">
                 <MediaPage path="general/avatar.png" alt="" w={100} h={100} />

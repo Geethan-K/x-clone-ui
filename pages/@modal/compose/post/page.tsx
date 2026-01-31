@@ -1,14 +1,14 @@
 "use client";
 
-import MediaPage from "@/app/components/MediaPage";
+import MediaPage from "../../../../components/MediaPage";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-const CreatePostModal = () => {
+const PostModal = () => {
   const router = useRouter();
 
   const closeModal = () => {
-    router.back();
+    router.back();  
   };
 
   return (
@@ -25,7 +25,7 @@ const CreatePostModal = () => {
         <div className="py-8 flex gap-4">
           <div className="relative w-10 h-10 rounded-full overflow-hidden">
             <MediaPage
-              path="general/avatar.png"
+              path="/general/avatar.png"
               alt="Lama Dev"
               w={100}
               h={100}
@@ -42,42 +42,42 @@ const CreatePostModal = () => {
         <div className=" flex items-center justify-between gap-4 flex-wrap border-t border-borderGray pt-4">
           <div className="flex gap-4 flex-wrap">
             <Image
-              src="icons/image.svg"
+              src="/icons/image.svg"
               alt=""
               width={20}
               height={20}
               className="cursor-pointer"
             />
             <Image
-              src="icons/gif.svg"
+              src="/icons/gif.svg"
               alt=""
               width={20}
               height={20}
               className="cursor-pointer"
             />
             <Image
-              src="icons/poll.svg"
+              src="/icons/poll.svg"
               alt=""
               width={20}
               height={20}
               className="cursor-pointer"
             />
             <Image
-              src="icons/emoji.svg"
+              src="/icons/emoji.svg"
               alt=""
               width={20}
               height={20}
               className="cursor-pointer"
             />
             <Image
-              src="icons/schedule.svg"
+              src="/icons/schedule.svg"
               alt=""
               width={20}
               height={20}
               className="cursor-pointer"
             />
             <Image
-              src="icons/location.svg"
+              src="/icons/location.svg"
               alt=""
               width={20}
               height={20}
@@ -91,4 +91,4 @@ const CreatePostModal = () => {
   );
 };
 
-export default CreatePostModal;
+export default PostModal;
